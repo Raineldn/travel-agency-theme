@@ -5,6 +5,7 @@
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <link rel="stylesheet" href="css/main.css">
       <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -104,6 +105,38 @@
         </div>
       </section>
 
+      <!-- Section: Icon Boxes -->
+
+      <section class="section section-icons grey lighten-4 center">
+        <div class="container">
+          <div class="row">
+            <div class="col s12 m4">
+              <div class="card-panel">
+                <i class="material-icons large teal-text">room</i>
+                <h4>Pick Where</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, tenetur.</p>
+              </div>
+            </div>
+            <div class="col s12 m4">
+              <div class="card-panel">
+                <i class="material-icons large teal-text">store</i>
+                <h4>Travel Shop</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, tenetur.</p>
+              </div>
+            </div>
+            <div class="col s12 m4">
+              <div class="card-panel">
+                <i class="material-icons large teal-text">airplanemode_active</i>
+                <h4>Fly Cheap</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, tenetur.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Popular Places -->
+
       <!--JavaScript at end of body for optimized loading-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script>
@@ -118,7 +151,21 @@
           height: 500,
           transition: 500,
           interval: 6000
-        })
+        });
+
+        // Autocomplete
+        const ac = document.querySelector('.autocomplete');
+        M.Autocomplete.init(ac, {
+          data: {
+            "Aruba": null,
+            "Cancun Mexico": null,
+            "Hawaii": null,
+            "Florida": null,
+            "California": null,
+            "Jamaica": null,
+            "Southern France": null,
+          }
+        });
       </script>
     </body>
   </html>
